@@ -95,9 +95,10 @@ Because on node1 we need to initilize the cluster and reset we need to connect o
 Step 3:- On Node2 copy and configure docker-compose file and galera.conf file. add your node2 machine IP in the place of 'node2 IP' 
 
 docker-compose.yml 
-version: '3'
-services:
-  mariadb:
+
+version: '3' 
+services: 
+  mariadb: 
     image: mariadb
     network_mode: host
     ports:
@@ -152,9 +153,11 @@ wsrep_sst_method=rsync
 wsrep_node_address="node2 IP"
 wsrep_node_name="galera-n2"
 
+
 Step 4:- On Node3 copy and configure docker-compose file and galera.conf file. add your node3 machine IP in the place of 'node3 IP' 
 
 docker-compose.yml 
+
 version: '3'
 services:
   mariadb:
