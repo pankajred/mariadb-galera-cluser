@@ -12,6 +12,7 @@ Step 1 :- clone the project file (docker-compose.yml and galera.conf) on your ma
 Step 2 :- On node1 copy and configure docker-compose file and galera.conf, add your node1 machine IP in the place of 'node1 IP'
 
 docker-compose.yml 
+
 version: '3'
 services:
   mariadb:
@@ -41,7 +42,7 @@ Note :- After starting node1 wait for 2-3 minutes to prepare databse.
 Note :- Add Ip of node1, node2 and node3 in the place of IP1, IP2 and IP3. this file will be same for node1, node2 and node3
 except "Galera Node Configuration" Section, In "Galera Node Configuration" we need to change node address and name. 
 
-# Galera Node Configuration
+#Galera Node Configuration
 wsrep_node_address="node1 IP" 
 wsrep_node_name="galera-n1" 
 
@@ -54,7 +55,7 @@ default-storage-engine=innodb
 innodb_autoinc_lock_mode=2
 bind-address=0.0.0.0
 
-# Galera Provider Configuration
+#Galera Provider Configuration
 wsrep_on=ON
 
 #for base VM
@@ -63,7 +64,7 @@ wsrep_on=ON
 wsrep_provider=/usr/lib/libgalera_smm.so
 
 
-# Galera Cluster Configuration
+#Galera Cluster Configuration
 wsrep_cluster_name="test_cluster"
 wsrep_cluster_address="gcomm://IP1,IP2,IP3"
 
@@ -71,10 +72,10 @@ wsrep_cluster_address="gcomm://IP1,IP2,IP3"
 #wsrep_sst_auth="password"
 
 
-# Galera Synchronization Configuration
+#Galera Synchronization Configuration
 wsrep_sst_method=rsync
 
-# Galera Node Configuration
+#Galera Node Configuration
 wsrep_node_address="node1 IP"
 wsrep_node_name="galera-n1"
 
@@ -117,7 +118,7 @@ services:
 Note :- Add Ip of node1, node2 and node3 in the place of IP1, IP2 and IP3. this file will be same for node1, node2 and node3
 except "Galera Node Configuration" Section, In "Galera Node Configuration" we need to change node address and name. 
 
-# Galera Node Configuration
+#Galera Node Configuration
 wsrep_node_address="node2 IP" 
 wsrep_node_name="galera-n2" 
 
@@ -130,14 +131,13 @@ default-storage-engine=innodb
 innodb_autoinc_lock_mode=2
 bind-address=0.0.0.0
 
-# Galera Provider Configuration
+#Galera Provider Configuration
 wsrep_on=ON
 
 #wsrep_provider=/usr/lib64/galera-4/libgalera_smm.so
 wsrep_provider=/usr/lib/libgalera_smm.so
 
-
-# Galera Cluster Configuration
+#Galera Cluster Configuration
 wsrep_cluster_name="test_cluster"
 wsrep_cluster_address="gcomm://IP1,IP2,IP3"
 
@@ -145,10 +145,10 @@ wsrep_cluster_address="gcomm://IP1,IP2,IP3"
 #wsrep_sst_auth="password"
 
 
-# Galera Synchronization Configuration
+#Galera Synchronization Configuration
 wsrep_sst_method=rsync
 
-# Galera Node Configuration
+#Galera Node Configuration
 wsrep_node_address="node2 IP"
 wsrep_node_name="galera-n2"
 
@@ -178,7 +178,7 @@ services:
 Note :- Add Ip of node1, node2 and node3 in the place of IP1, IP2 and IP3. this file will be same for node1, node2 and node3
 except "Galera Node Configuration" Section, In "Galera Node Configuration" we need to change node address and name. 
 
-# Galera Node Configuration
+#Galera Node Configuration
 wsrep_node_address="node3 IP" 
 wsrep_node_name="galera-n3" 
 
@@ -191,14 +191,14 @@ default-storage-engine=innodb
 innodb_autoinc_lock_mode=2
 bind-address=0.0.0.0
 
-# Galera Provider Configuration
+#Galera Provider Configuration
 wsrep_on=ON
 
 #wsrep_provider=/usr/lib64/galera-4/libgalera_smm.so
 wsrep_provider=/usr/lib/libgalera_smm.so
 
 
-# Galera Cluster Configuration
+#Galera Cluster Configuration
 wsrep_cluster_name="test_cluster"
 wsrep_cluster_address="gcomm://IP1,IP2,IP3"
 
@@ -206,10 +206,10 @@ wsrep_cluster_address="gcomm://IP1,IP2,IP3"
 #wsrep_sst_auth="password"
 
 
-# Galera Synchronization Configuration
+#Galera Synchronization Configuration
 wsrep_sst_method=rsync
 
-# Galera Node Configuration
+#Galera Node Configuration
 wsrep_node_address="node3 IP"
 wsrep_node_name="galera-n3"
 
