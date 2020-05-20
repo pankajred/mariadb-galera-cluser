@@ -1,0 +1,21 @@
+version: '3'
+services:
+  mariadb:
+    image: mariadb
+    network_mode: host
+    ports:
+      - "192.168.1.111:3306:3306"
+      - "192.168.1.111:4444:4444"
+      - "192.168.1.111:4567:4567"
+      - "192.168.1.111:4568:4568"
+    hostname: galera-n1
+    container_name: mariadb-galera-n1
+    restart: always
+    command: 
+      - --wsrep-new-cluster
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+    volumes:
+      - /dbdata/mysql/data:/var/lib/mysql
+      - /dbdata/mysql/logs:/var/log/mysql
+      - ./conf.d:/etc/mysql/mariadb.conf
