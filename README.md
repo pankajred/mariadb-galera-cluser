@@ -1,6 +1,6 @@
 # mariadb-galera-cluser on docker-compose 
 
-Note:- In Mariadb Galera cluer every node work like a Master and as well as Slave. 
+Note:- In Mariadb Galera cluster every node work like a Master and as well as Slave. 
 
 This mariadb galera cluster is of three nodes or machies 
 
